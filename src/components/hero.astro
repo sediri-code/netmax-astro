@@ -20,13 +20,12 @@ import { Icon } from "astro-icon";
   </div>
   <div>
     <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      class="text-5xl lg:text-8xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter boujee-text">
+      Take your socials to the next level!
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Netmax provides powerful tools to enhance your social media presence and
+      improve your overall performance online.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
@@ -52,3 +51,37 @@ import { Icon } from "astro-icon";
     </div>
   </div>
 </main>
+
+<style>
+  .boujee-text {
+    --bg-size: 400%;
+    /* --color-one: hsl(15 90% 55%); */
+    --color-one: black;
+    /* --color-two: hsl(40 95% 55%); */
+    --color-two: #861841;
+    --color-three: #fc1966;
+    background: linear-gradient(
+        15deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-three),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 3s infinite linear;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+      animation: move-bg 3s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+</style>
